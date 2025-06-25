@@ -10,37 +10,61 @@
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: url('0f5b49fc-b293-466f-b658-a4c3d74bb2ae.png') center/cover fixed;
       color: #f1f1f1;
+      padding-top: 150px;
     }
     header {
       background-color: #e27c18;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
+      text-align: center;
+      padding: 15px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease-out;
     }
     header img {
       height: 80px;
-      margin-right: 15px;
+      margin-bottom: 10px;
     }
     header h1 {
       font-size: 2rem;
       margin: 0;
     }
     nav {
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-  gap: 30px;
-}
+      background-color: rgba(0,0,0,0.8);
+      padding: 70px 0 10px;
+      text-align: center;
+      margin-top: 90px;
+    }
+    nav div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    a.icon-link img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    a.icon-link:hover img {
+      transform: scale(1.2);
+      filter: invert(54%) sepia(89%) saturate(734%) hue-rotate(86deg) brightness(102%) contrast(101%);
+    }
     .nav-box {
       background: #2c2c2c;
       border-radius: 10px;
       padding: 15px;
       width: 60%;
+      margin: 40px auto;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease-out;
     }
     .nav-box h3 {
       margin-top: 0;
@@ -54,21 +78,9 @@
       padding: 50px 20px;
       background: rgba(0, 0, 0, 0.6);
       color: white;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    .menu-item {
-      background: #2b2b2b;
-      padding: 15px;
-      margin: 15px auto;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      animation: fadeIn 1.2s ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
     }
     footer {
       background: rgba(0,0,0,0.7);
@@ -77,79 +89,82 @@
       font-size: 0.9rem;
       color: #aaa;
     }
-  @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.nav-box {
-  animation: fadeIn 1s ease-out;
-}
-
-header {
-  animation: fadeIn 1s ease-out;
-}
-
-.hero {
-  animation: fadeIn 1.2s ease-out;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-}
-a.icon-link img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-a.icon-link:hover img {
-  transform: scale(1.2);
-  filter: invert(54%) sepia(89%) saturate(734%) hue-rotate(86deg) brightness(102%) contrast(101%);
-}
-</style>
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header img {
+        height: 60px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav div {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .nav-box {
+        width: 90% !important;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 1rem;
+      }
+      body {
+        padding-top: 200px !important;
+      }
+    }
+  </style>
 </head>
-<body style="padding-top: 150px;">
-  <header style="background-color: #e27c18; text-align: center; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center;"
-  <img src="1760bbff-a68c-4685-95b7-7fa6740d887a.png" alt="Pizza Cartoon Logo" style="height: 80px; margin-bottom: 10px;">
-  <h1 style="font-size: 2rem; margin: 0;">Pizza Cartoon</h1>
-</header>
-<nav style="background-color: rgba(0,0,0,0.8); padding: 70px 0 10px; text-align: center; margin-top: 90px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; max-width: 1000px; margin: 0 auto;">
-    <a href="#menu" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem;">Menú</a>
-    <a href="#contacto" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem;">Contacto</a>
-    <a href="https://wa.me/573205111971" target="_blank" title="WhatsApp" class="icon-link">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width: 24px; height: 24px; filter: invert(1);">
-    </a>
-    <a href="mailto:pizzacartoon.bussines@gmail.com" title="Correo" class="icon-link">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Correo" style="width: 24px; height: 24px; filter: invert(1);">
-    </a>
-    <a href="#" title="Próximamente Instagram" class="icon-link">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 24px; height: 24px; filter: invert(1);">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61577700365036&locale=es_LA" target="_blank" title="Facebook" class="icon-link">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 24px; height: 24px; filter: invert(1);">
-    </a>
-  </div>
-</nav>
-  <nav style="display: flex; flex-direction: column; align-items: center; gap: 40px; animation: fadeIn 1.3s ease-out;">
-  <hr style="border: none; border-top: 2px dashed #e27c18; width: 60%; margin: 30px auto; animation: fadeIn 1s ease-out;">
+<body>
+  <header>
+    <img src="1760bbff-a68c-4685-95b7-7fa6740d887a.png" alt="Pizza Cartoon Logo">
+    <h1>Pizza Cartoon</h1>
+  </header>
 
-<div id="menu" class="nav-box" style="margin-bottom: 40px;">
-  <h3>Menú</h3>
-  <img src="7c8f686e-ccfa-4c0f-8e89-b031fc675cc0.png" alt="Menú Parte 1" style="width:100%; border-radius: 10px; margin-bottom: 10px;" />
-  <img src="467ee78b-2f3c-40d1-8907-e90e7d79d5c4.png" alt="Menú Parte 2" style="width:100%; border-radius: 10px;" />
-</div>
-
-<hr style="border: none; border-top: 2px dashed #e27c18; width: 60%; margin: 30px auto; animation: fadeIn 1s ease-out;">
-
-<div id="contacto" class="nav-box">
-  <h3>Contacto y Ubicación</h3>
-  <p><strong>Dirección:</strong> Cra 21 #7-01 Bucaramanga - Comuneros</p>
-  <p><strong>Teléfono:</strong> 3205111971</p>
-  <p><strong>WhatsApp:</strong> <a href="https://wa.me/573205111971" target="_blank" style="color: #e27c18; text-decoration: none;">3205111971</a></p>
-  <p><strong>Correo:</strong> <a href="mailto:pizzacartoon.bussines@gmail.com" style="color: #e27c18; text-decoration: none;">pizzacartoon.bussines@gmail.com</a></p>
-</div>
+  <nav>
+    <div>
+      <a href="#menu" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem;">Menú</a>
+      <a href="#contacto" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem;">Contacto</a>
+      <a href="https://wa.me/573205111971" target="_blank" title="WhatsApp" class="icon-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width: 24px; height: 24px; filter: invert(1);">
+      </a>
+      <a href="mailto:pizzacartoon.bussines@gmail.com" title="Correo" class="icon-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Correo" style="width: 24px; height: 24px; filter: invert(1);">
+      </a>
+      <a href="#" title="Próximamente Instagram" class="icon-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 24px; height: 24px; filter: invert(1);">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61577700365036&locale=es_LA" target="_blank" title="Facebook" class="icon-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 24px; height: 24px; filter: invert(1);">
+      </a>
+    </div>
   </nav>
+
+  <section id="menu" class="nav-box">
+    <h3>Menú</h3>
+    <img src="7c8f686e-ccfa-4c0f-8e89-b031fc675cc0.png" alt="Menú Parte 1" style="width:100%; border-radius: 10px; margin-bottom: 10px;" />
+    <img src="467ee78b-2f3c-40d1-8907-e90e7d79d5c4.png" alt="Menú Parte 2" style="width:100%; border-radius: 10px;" />
+  </section>
+
+  <section id="contacto" class="nav-box">
+    <h3>Contacto y Ubicación</h3>
+    <p><strong>Dirección:</strong> Cra 21 #7-01 Bucaramanga - Comuneros</p>
+    <p><strong>Teléfono:</strong> 3205111971</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573205111971" target="_blank" style="color: #e27c18; text-decoration: none;">3205111971</a></p>
+    <p><strong>Correo:</strong> <a href="mailto:pizzacartoon.bussines@gmail.com" style="color: #e27c18; text-decoration: none;">pizzacartoon.bussines@gmail.com</a></p>
+  </section>
+
   <section class="hero">
     <h2>¡Bienvenido a Pizza Cartoon!</h2>
     <p>Donde la pizza es tan divertida como deliciosa</p>
   </section>
+
   <footer>
     &copy; 2025 Pizza Cartoon. Todos los derechos reservados.
   </footer>
