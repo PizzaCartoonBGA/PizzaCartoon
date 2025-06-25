@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pizza Cartoon</title>
+
+  <!-- Fuente mejorada -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Comic Neue', cursive;
       background: url('0f5b49fc-b293-466f-b658-a4c3d74bb2ae.png') center/cover fixed;
       color: #f1f1f1;
       padding-top: 150px;
     }
+
     header {
       background-color: #e27c18;
       text-align: center;
@@ -27,20 +33,24 @@
       justify-content: center;
       animation: fadeIn 1s ease-out;
     }
+
     header img {
       height: 80px;
       margin-bottom: 10px;
     }
+
     header h1 {
       font-size: 2rem;
       margin: 0;
     }
+
     nav {
       background-color: rgba(0,0,0,0.8);
       padding: 70px 0 10px;
       text-align: center;
       margin-top: 90px;
     }
+
     nav div {
       display: flex;
       flex-wrap: wrap;
@@ -50,29 +60,35 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     a.icon-link img {
       transition: transform 0.3s ease, filter 0.3s ease;
     }
+
     a.icon-link:hover img {
       transform: scale(1.2);
       filter: invert(54%) sepia(89%) saturate(734%) hue-rotate(86deg) brightness(102%) contrast(101%);
     }
+
     .nav-box {
       background: #2c2c2c;
       border-radius: 10px;
       padding: 15px;
-      width: 60%;
+      width: 100%;
+      max-width: 600px;
       margin: 40px auto;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       animation: fadeIn 1s ease-out;
     }
+
     .nav-box h3 {
       margin-top: 0;
       color: #e27c18;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       border-bottom: 2px solid #e27c18;
       padding-bottom: 5px;
     }
+
     .hero {
       text-align: center;
       padding: 50px 20px;
@@ -82,6 +98,12 @@
       animation-delay: 0.2s;
       animation-fill-mode: both;
     }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
     footer {
       background: rgba(0,0,0,0.7);
       padding: 15px;
@@ -89,39 +111,48 @@
       font-size: 0.9rem;
       color: #aaa;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* RESPONSIVE */
+    /* RESPONSIVE: Celular */
     @media (max-width: 768px) {
-      header img {
-        height: 60px;
+      .nav-box {
+        width: 95%;
+        padding: 20px;
       }
-      header h1 {
-        font-size: 1.5rem;
-      }
+
       nav div {
         flex-direction: column;
         gap: 20px;
       }
-      .nav-box {
-        width: 90% !important;
+
+      nav a {
+        font-size: 1.2rem;
       }
+
+      header img {
+        height: 60px;
+      }
+
+      header h1 {
+        font-size: 1.7rem;
+      }
+
       .hero h2 {
         font-size: 2rem;
       }
-      nav a {
-        font-size: 1rem;
-      }
+
       body {
-        padding-top: 200px !important;
+        padding-top: 190px !important;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="1760bbff-a68c-4685-95b7-7fa6740d887a.png" alt="Pizza Cartoon Logo">
     <h1>Pizza Cartoon</h1>
@@ -129,8 +160,8 @@
 
   <nav>
     <div>
-      <a href="#menu" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem;">Menú</a>
-      <a href="#contacto" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem;">Contacto</a>
+      <a href="#menu" style="color: white; text-decoration: none; font-weight: bold;">Menú</a>
+      <a href="#contacto" style="color: white; text-decoration: none; font-weight: bold;">Contacto</a>
       <a href="https://wa.me/573205111971" target="_blank" title="WhatsApp" class="icon-link">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width: 24px; height: 24px; filter: invert(1);">
       </a>
@@ -168,5 +199,6 @@
   <footer>
     &copy; 2025 Pizza Cartoon. Todos los derechos reservados.
   </footer>
+
 </body>
 </html>
